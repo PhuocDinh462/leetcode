@@ -8,7 +8,7 @@
 function isValid(s: string): boolean {
   if (s.length % 2 !== 0) return false;
 
-  let prevLength;
+  let prevLength = 0;
 
   while (prevLength !== s.length) {
     prevLength = s.length;
