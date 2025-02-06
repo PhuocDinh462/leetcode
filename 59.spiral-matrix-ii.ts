@@ -7,10 +7,8 @@
 // @lc code=start
 function generateMatrix(n: number): number[][] {
   let result: number[][] = Array.from({ length: n }, () => Array(n).fill(0));
-  let currentValue = 1;
-  let layer = 0;
 
-  for (; ; layer++) {
+  for (let layer = 0, currentValue = 1; ; layer++) {
     // Traverse the top row
     for (let i = layer; i < n - layer; i++, currentValue++) {
       result[layer][i] = currentValue;
