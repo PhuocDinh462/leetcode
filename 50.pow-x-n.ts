@@ -13,12 +13,9 @@ function myPow(x: number, n: number): number {
   }
 
   if (n === 0) return 1;
-  else if (n % 2 === 0) return myPow(x * x, n / 2);
   else if (n < 0) return myPow(1 / x, -n);
-
-  let result = x;
-  for (let i = 1; i < n; i++) result *= x;
-
-  return result;
+  else if (n % 2 === 0) return myPow(x * x, n / 2);
+  else return myPow(x * x, Math.floor(n / 2)) * x;
 }
 // @lc code=end
+console.log(myPow(1, 100000));
