@@ -18,4 +18,3 @@ function myPow(x: number, n: number): number {
   else return myPow(x * x, Math.floor(n / 2)) * x;
 }
 // @lc code=end
-console.log(myPow(1, 100000));
