@@ -7,8 +7,6 @@
 // @lc code=start
 
 // Helper function to check if a character is a digit
-const isDigit = (c: string): boolean => c[0] >= "0" && c[0] <= "9";
-
 function myAtoi(s: string): number {
   let digits = ""; // To store the numeric part of the string
   let sum = 0; // To store the final integer value
