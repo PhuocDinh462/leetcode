@@ -15,11 +15,6 @@ function isValid(s: string): boolean {
 
   for (let i = 0; i < s.length; i++) {
     switch (s[i]) {
-      case "(":
-      case "[":
-      case "{":
-        stack.push(s[i]);
-        break;
       case ")":
         if (stack[stack.length - 1] === "(") stack.pop();
         else return false;
@@ -28,9 +23,12 @@ function isValid(s: string): boolean {
         if (stack[stack.length - 1] === "[") stack.pop();
         else return false;
         break;
-      default:
+      case "}":
         if (stack[stack.length - 1] === "{") stack.pop();
         else return false;
+        break;
+      default:
+        stack.push(s[i]);
     }
   }
 
