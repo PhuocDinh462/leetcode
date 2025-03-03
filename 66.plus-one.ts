@@ -12,7 +12,10 @@ function plusOne(digits: number[]): number[] {
     if (digits[i] <= 9) return digits;
     else {
       digits[i] = 0;
-      if (i === 0) return [1, ...digits];
+      if (i === 0) {
+        digits.unshift(1);
+        return digits;
+      }
     }
   }
 
