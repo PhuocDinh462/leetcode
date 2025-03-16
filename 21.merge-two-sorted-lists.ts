@@ -18,25 +18,6 @@
  * }
  */
 
-class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-
-  print = () => {
-    let current: ListNode | null = this;
-    const values: number[] = [];
-    while (current) {
-      values.push(current.val);
-      current = current.next;
-    }
-    console.log(values.join(" -> "));
-  };
-}
-
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   if (!list1 || !list2) return list1 || list2;
 
