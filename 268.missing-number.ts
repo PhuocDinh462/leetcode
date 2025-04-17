@@ -6,12 +6,6 @@
 
 // @lc code=start
 function missingNumber(nums: number[]): number {
-  let result = 0;
-
-  for (let i = 0; i < nums.length; i++, result += i) {
-    result -= nums[i];
-  }
-
-  return result;
+  return (nums.length * (nums.length + 1)) / 2 - nums.reduce((a, b) => a + b);
 }
 // @lc code=end
