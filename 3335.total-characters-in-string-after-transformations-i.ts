@@ -6,8 +6,6 @@ function lengthAfterTransformations(s: string, t: number): number {
     cnt[char.charCodeAt(0) - "a".charCodeAt(0)]++;
   }
 
-  console.log(cnt);
-
   for (let j = 0; j < t; j++) {
     let tmp = Array(26).fill(0);
     for (let i = 0; i < 26; i++) {
@@ -19,8 +17,6 @@ function lengthAfterTransformations(s: string, t: number): number {
       }
     }
     cnt = tmp;
-
-    console.log(cnt);
   }
 
   return cnt.reduce((sum, val) => (sum + val) % MOD, 0);
