@@ -6,18 +6,18 @@
 
 // @lc code=start
 function wordPattern(pattern: string, s: string): boolean {
-  const sArray = s.split(" ");
+  const words = s.split(" ");
 
-  if (pattern.length !== sArray.length) return false;
+  if (pattern.length !== words.length) return false;
 
   const wordMap = new Map<string, string>();
   const wordSet = new Set<string>();
 
   for (let i = 0; i < pattern.length; i++) {
-    if (!wordMap.has(pattern[i]) && !wordSet.has(sArray[i])) {
-      wordMap.set(pattern[i], sArray[i]);
-      wordSet.add(sArray[i]);
-    } else if (wordMap.get(pattern[i]) != sArray[i]) return false;
+    if (!wordMap.has(pattern[i]) && !wordSet.has(words[i])) {
+      wordMap.set(pattern[i], words[i]);
+      wordSet.add(words[i]);
+    } else if (wordMap.get(pattern[i]) != words[i]) return false;
   }
 
   return true;
