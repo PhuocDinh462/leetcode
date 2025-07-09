@@ -29,10 +29,7 @@ function divide(dividend: number, divisor: number): number {
     let bit = 0;
     let i = divisor;
 
-    while (dividend - (i << 1) >= 0 && i << 1 > 0) {
-      i <<= 1;
-      bit++;
-    }
+    for (; dividend - (i << 1) >= 0 && i << 1 > 0; i <<= 1, bit++);
 
     dividend -= i;
     result += 1 << bit;
