@@ -8,12 +8,9 @@
 function repeatedCharacter(s: string): string {
   const charSet = new Set<string>();
 
-  for (let i = 0; i < s.length; i++) {
-    const prevSize = charSet.size;
-
-    charSet.add(s[i]);
-
-    if (charSet.size === prevSize) return s[i];
+  for (let c of s) {
+    if (charSet.has(c)) return c;
+    charSet.add(c);
   }
 
   return "";
