@@ -1,3 +1,11 @@
+/*
+ * @lc app=leetcode id=3335 lang=typescript
+ *
+ * [3335] Total Characters in String After Transformations I
+ */
+
+// @lc code=start
+
 function lengthAfterTransformations(s: string, t: number): number {
   const MOD = 1000000007;
   let cnt = Array(26).fill(0);
@@ -21,3 +29,4 @@ function lengthAfterTransformations(s: string, t: number): number {
 
   return cnt.reduce((sum, val) => (sum + val) % MOD, 0);
 }
+// @lc code=end
