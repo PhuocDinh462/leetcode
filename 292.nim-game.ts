@@ -6,6 +6,6 @@
 
 // @lc code=start
 function canWinNim(n: number): boolean {
-  return n % 4 != 0;
+  return n % 4 !== 0;
 }
 // @lc code=end
