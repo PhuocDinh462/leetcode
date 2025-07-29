@@ -18,9 +18,7 @@ function addStrings(num1: string, num2: string): string {
   let hasSurplus = false;
 
   for (let i = 0; i < Math.min(num1.length, num2.length); i++) {
-    const digit1 = num1[i].charCodeAt(0) - "0".charCodeAt(0);
-    const digit2 = num2[i].charCodeAt(0) - "0".charCodeAt(0);
-    let digitSum = digit1 + digit2;
+    let digitSum = +num1[i] + +num2[i];
 
     if (hasSurplus) {
       digitSum++;
@@ -33,7 +31,7 @@ function addStrings(num1: string, num2: string): string {
   }
 
   for (let i = remainStr.length - 1; i >= 0; i--) {
-    let digit = remainStr[i].charCodeAt(0) - "0".charCodeAt(0);
+    let digit = +remainStr[i];
 
     if (hasSurplus) {
       digit++;
