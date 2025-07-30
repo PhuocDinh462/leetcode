@@ -15,8 +15,6 @@ function mostCommonWord(paragraph: string, banned: string[]): string {
 
   const wordMap = new Map<string, number>();
 
-  console.log(words);
-
   for (const w of words) {
     if (wordMap.has(w)) wordMap.set(w, wordMap.get(w)! + 1);
     else wordMap.set(w, 1);
