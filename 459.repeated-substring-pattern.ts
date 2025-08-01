@@ -6,8 +6,6 @@
 
 // @lc code=start
 function repeatedSubstringPattern(s: string): boolean {
-  console.log((s + s).slice(1, -1));
-
   if (s.length === 1) return false;
 
   let patternLength = Math.floor(s.length / 2);
