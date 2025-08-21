@@ -6,12 +6,6 @@
 
 // @lc code=start
 function buildArray(nums: number[]): number[] {
-  const res: number[] = [];
-
-  for (const n of nums) {
-    res.push(nums[n]);
-  }
-
-  return res;
+  return nums.map((n) => nums[n]);
 }
 // @lc code=end
