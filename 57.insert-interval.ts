@@ -37,6 +37,6 @@ function insert(intervals: number[][], newInterval: number[]): number[][] {
     return res;
   }
 
-  return merge([...intervals, newInterval]);
+  return merge(intervals.concat([newInterval]));
 }
 // @lc code=end
