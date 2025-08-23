@@ -14,7 +14,7 @@ function merge(intervals: number[][]): number[][] {
     const start = intervals[i][0];
     let end = intervals[i][1];
 
-    if (start < 0) continue;
+    if (start === -1) continue;
 
     if (i > 0 && res.length > 1 && end < res[res.length - 1][1]) break;
 
@@ -26,7 +26,7 @@ function merge(intervals: number[][]): number[][] {
         break;
       } else {
         // Assign with a negative value to ignore this element
-        intervals[j][0] *= -1;
+        intervals[j][0] = -1;
       }
     }
 
