@@ -10,8 +10,7 @@ function longestPalindrome(s: string): number {
   let res = 0;
 
   for (const c of s) {
-    if (charMap.has(c)) charMap.set(c, charMap.get(c)! + 1);
-    else charMap.set(c, 1);
+    charMap.set(c, (charMap.get(c) ?? 0) + 1);
   }
 
   for (const [key, val] of charMap) {
