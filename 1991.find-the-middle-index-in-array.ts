@@ -1,11 +1,11 @@
 /*
- * @lc app=leetcode id=724 lang=typescript
+ * @lc app=leetcode id=1991 lang=typescript
  *
- * [724] Find Pivot Index
+ * [1991] Find the Middle Index in Array
  */
 
 // @lc code=start
-function pivotIndex(nums: number[]): number {
+function findMiddleIndex(nums: number[]): number {
   let sumLeft = 0;
   let sumRight = nums.reduce((a, b) => a + b);
 
