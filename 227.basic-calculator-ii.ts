@@ -6,14 +6,12 @@
 
 // @lc code=start
 function calculate(s: string): number {
-  s = s.replaceAll(" ", "");
-
-  let groups = s.split(/([+-])/);
+  const groups = s.split(/([+-])/);
 
   for (let i = 0; i < groups.length; i++) {
     if (groups[i] === "+" || groups[i] === "-") continue;
 
-    let subgroups = groups[i].split(/([*/])/);
+    const subgroups = groups[i].split(/([*/])/);
     let res = +subgroups[0];
 
     if (subgroups.length > 2) {
