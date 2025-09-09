@@ -13,7 +13,7 @@ function calculate(s: string): number {
   for (let i = 0; i < groups.length; i++) {
     if (groups[i] === "+" || groups[i] === "-") continue;
 
-    let subgroups = groups[i].match(/(\d+|[*/])/g)!;
+    let subgroups = groups[i].split(/([*/])/);
     let res = +subgroups[0];
 
     if (subgroups.length > 2) {
